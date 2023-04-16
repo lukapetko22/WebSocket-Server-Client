@@ -127,6 +127,9 @@ public class WSMessage {
      */
     public Byte[] EncodeNoMask(Byte[] msg) {
         try {
+            this.PAYLOAD = new Byte[msg.Length];
+            Buffer.BlockCopy(msg, 0, this.PAYLOAD, 0, msg.Length); //copy so that we have the original undecoded message stored
+
             int startindex = 0; //index from which the payload begins
 
             //1st byte -> FIN(1b) RSV1(1b) RSV2(1b) RSV3(1b) OPCODE(4b)
