@@ -39,6 +39,7 @@ _Storing GPS data_ in an SQLite database:
 - Data is sanitized before being stored by using REGEX
 
 _Reusing tasks_ - Task completes upon receiving a CLOSE frame
+
 _Pinging_ - Server is capable of responding to PING frames
 
 # _Client:_
