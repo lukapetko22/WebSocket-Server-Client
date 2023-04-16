@@ -13,6 +13,7 @@ _Handling_ WebSocket messages is fully abstracted through the usage of WSMessage
 - Handshaking
 - Message control frame recognition - TEXT, PING, PONG, CLOSE 
 - Control frame generating - TEXT, PING, PONG, CLOSE
+
     ``` cs
         WSMessage msg1 = new WSMessage();
         msg1.EncodeNoMask(Encoding.ASCII.GetBytes("This is a string."));
